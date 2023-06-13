@@ -20,6 +20,21 @@ public class CoreCompetency {
 
     // Custom toString, equals, and hashCode methods:
 
+    //Getters and Setters
+
+    //Getter for ID
+    public int getId() {
+        return id;
+    }
+
+    //Getter and Setter for value
+    public String getValue() {
+        return value;
+    }
+    public void setValue(String value) {
+        this.value = value;
+    }
+
     @Override
     public String toString() {
         return value;
