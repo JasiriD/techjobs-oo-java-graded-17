@@ -27,7 +27,9 @@ public class Employer {
 
     @Override
     public boolean equals(Object o) {  // Two objects are equal if they have the same id.
+        //returns true if passed object is identical to comparee
         if (this == o) return true;
+        //returns false if passed object is not of type Employer
         if (!(o instanceof Employer)) return false;
         Employer employer = (Employer) o;
         return getId() == employer.getId();
