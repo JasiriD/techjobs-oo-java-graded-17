@@ -104,4 +104,56 @@ public class Job {
     public int hashCode() {
         return Objects.hash(getId());
     }
+
+    //toString Method
+
+    @Override
+    public String toString(){
+        //Placeholder String for output
+        String outputString = "";
+
+        //Starts outputString with separator
+        outputString += "\n";
+
+        //Adding each individual  class name to toString output
+        outputString += "ID: " + this.id + "\n";
+
+        //These if statements check if the given parameters are empty. If they are empty, replace whatever the actual name of the parameter is with "Data not available"
+        if(this.name != "") {
+            outputString += "Name: " + this.name + "\n";
+        }else{
+            outputString += "Name: Data not available\n";
+        }
+
+        if(this.employer.getValue() != "") {
+            outputString += "Employer: " + this.employer + "\n";
+        }else{
+            outputString += "Employer: Data not available\n";
+        }
+
+        if(this.location.getValue() != ""){
+            outputString += "Location: " + this.location + "\n";
+        }
+        else{
+            outputString += "Location: Data not available\n";
+        }
+
+        if(this.positionType.getValue() != "") {
+            outputString += "Position Type: " + this.positionType + "\n";
+        }else{
+            outputString += "Position Type: Data not available\n";
+        }
+        //This one has no separator due to code below adding it
+        if(this.coreCompetency.getValue() != "") {
+            outputString += "Core Competency: " + this.coreCompetency;
+        }else{
+            outputString += "Core Competency: Data not available";
+        }
+
+        //Ends outputString with separator
+        outputString += "\n";
+
+        //final return
+        return outputString;
+    }
 }

@@ -2,9 +2,12 @@ package org.launchcode.techjobs.oo;
 
 import java.util.Objects;
 
-public class Employer {
-
-    private int id;
+//Extending JobField to import it essentially
+public class Employer extends  JobField{
+    //They told me to do this I dont understand why
+    public Employer(String value){ super(value);
+    }
+    /*private int id;
     private static int nextId = 1;
     private String value;
 
@@ -16,16 +19,16 @@ public class Employer {
     public Employer(String value) {
         this();
         this.value = value;
-    }
+    }*/
 
     // Custom toString, equals, and hashCode methods:
 
-    @Override
+    /*@Override
     public String toString() {
         return value;
-    }
+    }*/
 
-    @Override
+    /*@Override
     public boolean equals(Object o) {  // Two objects are equal if they have the same id.
         //returns true if passed object is identical to comparee
         if (this == o) return true;
@@ -38,11 +41,11 @@ public class Employer {
     @Override
     public int hashCode() {
         return Objects.hash(getId());
-    }
+    }*/
 
     // Getters and Setters:
 
-    public int getId() {
+    /*public int getId() {
         return id;
     }
 
@@ -52,6 +55,6 @@ public class Employer {
 
     public void setValue(String value) {
         this.value = value;
-    }
+    }*/
 
 }
